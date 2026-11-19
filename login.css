@@ -1,0 +1,16 @@
+/* Metro — the "Sign in to Steam" window. */
+@import url("./core/alias.css");
+@import url("./core/tokens.css");
+@import url("./core/base.css");
+@import url("./core/backdrop.css");
+html .Login, html .Login.AnimatedBackground, html .LoginAnimatedBackground,
+html .Login .LoginStatusContainer, html .Login .SpinnerLoaderContainer { background: transparent !important; }
+html .Login.AnimatedBackground::before, html .LoginAnimatedBackground::after, html .Login video { display: none !important; }
+html .Login .SpinnerLoaderContainer { position: relative; }
+html .Login .SpinnerLoaderContainer > img { opacity: 0 !important; }
+/* METRO sign-in: an accent plane, a filling bar */
+html .Login .SpinnerLoaderContainer::before { content: "metro"; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font: 300 40px var(--mt-light); color: #fff; }
+html .Login .LoadingStatus, html .Login .LoadingStatus > .LoginStatus { font-family: var(--mt-light) !important; font-weight: 300 !important; text-transform: lowercase; color: #fff !important; font-size: 16px !important; }
+html .Login .ProgressBar { background: var(--mt-accent) !important; border-radius: 0 !important; }
+html .Login .Avatar img { border-radius: 0 !important; }
+html .Login .UserContainer > .PersonaName { font-family: var(--mt-light) !important; font-weight: 300 !important; font-size: 26px !important; color: #fff !important; text-transform: lowercase; }

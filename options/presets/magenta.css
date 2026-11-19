@@ -1,0 +1,7 @@
+/* METRO: Magenta on black */
+:root {
+    --mt-p-accent: #E0337E;
+    --mt-p-bg: #0E0E10;
+    --mt-p-surface: #18181B;
+    --mt-p-tile: #26262A;
+}

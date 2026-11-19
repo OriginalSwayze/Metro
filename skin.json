@@ -1,0 +1,292 @@
+{
+    "name": "Metro",
+    "author": "OriginalSwayze",
+    "description": "Modern industrial minimalism: flat squared graphite and gunmetal panels, one burnt accent, large light lowercase typography and generous spacing. Huge pivot headers for navigation, a lock-screen clock, flat dock tiles and animated accent lines.",
+    "version": "1.0.0",
+    "tags": [
+        "Minimal",
+        "Flat",
+        "Typography",
+        "Professional",
+        "Industrial"
+    ],
+    "header_image": "https://raw.githubusercontent.com/OriginalSwayze/Metro/main/media/library.gif",
+    "splash_image": "https://raw.githubusercontent.com/OriginalSwayze/Metro/main/media/gamepage.png",
+    "github": {
+        "owner": "OriginalSwayze",
+        "repo_name": "Metro"
+    },
+    "Steam-WebKit": "webkit.css",
+    "Conditions": {
+        "Accent colour": {
+            "description": "Burnt orange, Amber, Cobalt, Lime or Magenta.",
+            "tab": "Appearance",
+            "default": "Ember",
+            "values": {
+                "Ember": {
+                    "TargetCss": {
+                        "affects": [
+                            ".*"
+                        ],
+                        "src": "options/presets/ember.css"
+                    }
+                },
+                "Amber": {
+                    "TargetCss": {
+                        "affects": [
+                            ".*"
+                        ],
+                        "src": "options/presets/amber.css"
+                    }
+                },
+                "Cobalt": {
+                    "TargetCss": {
+                        "affects": [
+                            ".*"
+                        ],
+                        "src": "options/presets/cobalt.css"
+                    }
+                },
+                "Lime": {
+                    "TargetCss": {
+                        "affects": [
+                            ".*"
+                        ],
+                        "src": "options/presets/lime.css"
+                    }
+                },
+                "Magenta": {
+                    "TargetCss": {
+                        "affects": [
+                            ".*"
+                        ],
+                        "src": "options/presets/magenta.css"
+                    }
+                }
+            }
+        },
+        "Accent line": {
+            "description": "The thin accent line that runs across the header.",
+            "tab": "Motion",
+            "default": "On",
+            "values": {
+                "On": {},
+                "Off": {
+                    "TargetCss": {
+                        "affects": [
+                            ".*"
+                        ],
+                        "src": "options/runner-off.css"
+                    }
+                }
+            }
+        },
+        "Game list density": {
+            "description": "Row size in the game list.",
+            "tab": "Layout",
+            "default": "Comfortable",
+            "values": {
+                "Comfortable": {},
+                "Compact": {
+                    "TargetCss": {
+                        "affects": [
+                            "^Steam$"
+                        ],
+                        "src": "options/list-compact.css"
+                    }
+                }
+            }
+        },
+        "What's New shelf": {
+            "description": "The What's New carousel on the library home.",
+            "tab": "Layout",
+            "default": "Show",
+            "values": {
+                "Show": {},
+                "Hide": {
+                    "TargetCss": {
+                        "affects": [
+                            "^Steam$"
+                        ],
+                        "src": "options/hide-whats-new.css"
+                    }
+                }
+            }
+        },
+        "Readout": {
+            "description": "The lock-screen clock and date on the pivot row.",
+            "tab": "Layout",
+            "default": "On",
+            "values": {
+                "On": {},
+                "Off": {
+                    "TargetCss": {
+                        "affects": [
+                            "^Steam$"
+                        ],
+                        "src": "options/hud-off.css"
+                    }
+                }
+            }
+        },
+        "Startup screen": {
+            "description": "The flat accent start screen when Steam opens.",
+            "tab": "Motion",
+            "default": "On",
+            "values": {
+                "On": {},
+                "Off": {
+                    "TargetCss": {
+                        "affects": [
+                            "^Steam$"
+                        ],
+                        "src": "options/boot-off.css"
+                    }
+                }
+            }
+        },
+        "Motion": {
+            "description": "Full: everything. Calm: hovers only, the backdrop stands still. Still: no theme motion.",
+            "tab": "Motion",
+            "default": "Full",
+            "values": {
+                "Full": {},
+                "Calm": {
+                    "TargetCss": {
+                        "affects": [
+                            ".*"
+                        ],
+                        "src": "options/motion-calm.css"
+                    }
+                },
+                "Still": {
+                    "TargetCss": {
+                        "affects": [
+                            ".*"
+                        ],
+                        "src": "options/motion-still.css"
+                    }
+                }
+            }
+        },
+        "Cover hover": {
+            "description": "Library covers under the cursor: Tilt, Lift or Off.",
+            "tab": "Motion",
+            "default": "Tilt",
+            "values": {
+                "Tilt": {},
+                "Lift": {
+                    "TargetCss": {
+                        "affects": [
+                            "^Steam$"
+                        ],
+                        "src": "options/covers-lift.css"
+                    }
+                },
+                "Off": {
+                    "TargetCss": {
+                        "affects": [
+                            "^Steam$"
+                        ],
+                        "src": "options/covers-off.css"
+                    }
+                }
+            }
+        },
+        "Privacy": {
+            "description": "Blur your account name and wallet until hovered.",
+            "tab": "Extras",
+            "default": "Off",
+            "values": {
+                "Off": {},
+                "Blur": {
+                    "TargetCss": {
+                        "affects": [
+                            "^Steam$"
+                        ],
+                        "src": "options/privacy.css"
+                    }
+                }
+            }
+        },
+        "Contrast": {
+            "description": "High: solid panels and brighter secondary text.",
+            "tab": "Accessibility",
+            "default": "Normal",
+            "values": {
+                "Normal": {},
+                "High": {
+                    "TargetCss": {
+                        "affects": [
+                            ".*"
+                        ],
+                        "src": "options/contrast-high.css"
+                    }
+                }
+            }
+        },
+        "Focus rings": {
+            "description": "Strong: a thick, high-visibility outline on whatever has keyboard or controller focus.",
+            "tab": "Accessibility",
+            "default": "Standard",
+            "values": {
+                "Standard": {},
+                "Strong": {
+                    "TargetCss": {
+                        "affects": [
+                            ".*"
+                        ],
+                        "src": "options/focus-strong.css"
+                    }
+                }
+            }
+        },
+        "Text size": {
+            "description": "Large: bigger game list and body text.",
+            "tab": "Accessibility",
+            "default": "Normal",
+            "values": {
+                "Normal": {},
+                "Large": {
+                    "TargetCss": {
+                        "affects": [
+                            ".*"
+                        ],
+                        "src": "options/text-large.css"
+                    }
+                }
+            }
+        }
+    },
+    "Patches": [
+        {
+            "MatchRegexString": "^Steam$",
+            "TargetCss": "main.css",
+            "TargetJs": "js/main.js"
+        },
+        {
+            "MatchRegexString": ".ModalDialogPopup",
+            "TargetCss": "main.css"
+        },
+        {
+            "MatchRegexString": ".FullModalOverlay",
+            "TargetCss": "main.css"
+        },
+        {
+            "MatchRegexString": ".friendsui-container",
+            "TargetCss": "friends.css"
+        },
+        {
+            "MatchRegexString": ".ContextMenuPopup",
+            "TargetCss": "popup.css"
+        },
+        {
+            "MatchRegexString": ".DesktopToastContainer",
+            "TargetCss": "toast.css"
+        },
+        {
+            "MatchRegexString": "^Sign in to Steam$",
+            "TargetCss": "login.css"
+        }
+    ]
+}

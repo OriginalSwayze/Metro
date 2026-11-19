@@ -1,0 +1,44 @@
+/* ==========================================================================
+   METRO — layout: pivot headers.
+     · Header: wordmark and menus on a thin line
+     · Under it: Store / Library / Community / You as huge lowercase pivot words; the
+       current one bright, the rest dimmed, an accent bar sliding under the active word
+     · A lock-screen clock on the right of the pivot row, the dock as flat square tiles beside it
+     · Below: a transparent game list on the left (no panel) and the page as one flat plane
+   ========================================================================== */
+html .OuterFrame > .TopBar { height: 124px !important; min-height: 124px !important; }
+html .TopBar > .TitleBar { height: 40px !important; }
+html .TopBar > .TitleBar :is(.RootMenuBar, .TitleBarControls, .WindowControls, .WindowControls > .title-area, .title-bar-actions) { height: 40px !important; }
+html .TopBar > .SuperNavBar { top: 44px !important; left: 28px !important; right: auto !important; transform: none !important; height: 74px !important; width: auto !important; }
+html .SuperNavBar .SuperNav { background: transparent !important; box-shadow: none !important; -webkit-backdrop-filter: none !important; backdrop-filter: none !important; height: 74px !important; padding: 0 !important; margin: 0 !important; gap: 0 !important; align-items: flex-end; }
+html .SuperNav > svg.Arrow { align-self: center; margin-right: 6px !important; }
+html .SuperNav .SuperNavMenu { height: 74px !important; }
+html .SuperNav .SuperNavMenu > .MenuButton {
+    height: 74px !important; padding: 0 22px 14px 0 !important; align-items: flex-end !important; border-radius: 0 !important; background: transparent !important;
+    font-family: var(--mt-light) !important; font-weight: 300 !important; font-size: 44px !important; letter-spacing: -.02em !important; text-transform: lowercase !important;
+    color: rgba(255,255,255,.28) !important; transition: color 220ms var(--mr-ease) !important;
+}
+html .SuperNav .SuperNavMenu:nth-last-child(1) > .MenuButton { font-size: 26px !important; padding-bottom: 20px !important; }
+html .SuperNav .SuperNavMenu:hover > .MenuButton { color: rgba(255,255,255,.6) !important; background: transparent !important; }
+html.mr-js .SuperNav .SuperNavMenu.Selected > .MenuButton, html .SuperNav .SuperNavMenu.Selected > .MenuButton { color: #fff !important; background: transparent !important; box-shadow: none !important; }
+html .SuperNav .mr-nav-indicator { background: linear-gradient(var(--mt-accent), var(--mt-accent)) 0 calc(100% - 4px) / calc(100% - 22px) 4px no-repeat !important; box-shadow: none !important; border-radius: 0 !important; animation: none !important; transition: transform 300ms var(--mr-ease), width 300ms var(--mr-ease) !important; }
+
+html .Library > .Container { padding: 6px 0 0 18px !important; gap: 8px !important; }
+html .Library > .Container > .LibraryWindowDivider { width: 1px !important; background: var(--t-line) !important; }
+html .MainPanel { margin-top: 0 !important; }
+
+/* Dock: flat square tiles on the pivot row */
+html .BottomBar {
+    left: auto !important; right: 22px !important; top: 58px !important; bottom: auto !important; margin: 0 !important;
+    height: 52px !important; width: auto !important; gap: 4px !important; padding: 0 !important; z-index: 31;
+}
+html .BottomBar::before { display: none !important; }
+html .BottomBar .DownloadStatus::before, html .BottomBar .DownloadStatus::after { display: none !important; }
+html .BottomBar :is(.AddGameButton, .DownloadStatus, .FriendsButton) {
+    width: 52px !important; height: 52px !important; padding: 0 !important; justify-content: center; border-radius: 0 !important;
+    background: var(--mt-tile) !important; color: #fff !important; transition: transform 140ms var(--mr-ease), background-color 140ms !important;
+}
+html .BottomBar .DownloadStatus { background: var(--mt-accent) !important; }
+html .BottomBar :is(.AddGameButton, .DownloadStatus, .FriendsButton):hover { background: color-mix(in srgb, var(--mt-tile) 70%, white) !important; }
+html .BottomBar :is(.AddGameButton, .DownloadStatus, .FriendsButton):active { transform: scale(.94); }
+html .BottomBar :is(.AddGameButton, .DownloadStatus, .FriendsButton) :is(.Text, .Queue) { display: none !important; }

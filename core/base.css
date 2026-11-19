@@ -1,0 +1,15 @@
+/* METRO — base: content enters from the side, quickly, and settles. */
+html, body { font-family: var(--mt-text) !important; color: #fff; }
+::selection { background: var(--mt-accent); color: #fff; }
+:where(:focus-visible) { outline: 2px solid #fff; outline-offset: 0; }
+::-webkit-scrollbar { width: 6px; height: 6px; background: transparent; }
+::-webkit-scrollbar-track, ::-webkit-scrollbar-corner { background: transparent; }
+::-webkit-scrollbar-thumb { background: #4A5158; }
+::-webkit-scrollbar-thumb:hover { background: var(--mt-accent); }
+::-webkit-scrollbar-button { display: none; width: 0; height: 0; }
+@keyframes mr-fade-up { from { opacity: 0; transform: translateX(calc(40px * var(--mr-motion))); } to { opacity: 1; transform: none; } }
+@keyframes mr-pop { from { opacity: 0; transform: translateY(calc(-10px * var(--mr-motion))); } to { opacity: 1; transform: none; } }
+@keyframes mt-line { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes mt-run { 0% { transform: translateX(-100%); } 100% { transform: translateX(100vw); } }
+@keyframes mt-fill { from { width: 0; } to { width: 100%; } }
+@keyframes mt-out { to { opacity: 0; visibility: hidden; transform: translateX(-60px); } }

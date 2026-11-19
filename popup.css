@@ -1,0 +1,16 @@
+/* Metro — context menus and dropdown menus (each is its own window). */
+@import url("./core/alias.css");
+@import url("./core/tokens.css");
+@import url("./core/base.css");
+html, body { background: transparent !important; }
+html body .contextMenu.ContextMenuPosition,
+html body .contextMenu { background: transparent !important; border: none !important; box-shadow: none !important; }
+/* METRO menus: a flat panel; items slide in from the side */
+html .contextMenu .contextMenuContents, html .contextMenu .NotificationsMenu { border-radius: 0 !important; border: 2px solid #3A4148 !important; background: #1F2328 !important; padding: 4px 0 !important; animation: mr-pop 200ms var(--mr-ease) backwards; }
+html .contextMenu .contextMenuContents > .contextMenuItem { animation: mr-fade-up 260ms var(--mr-ease) backwards; }
+html .contextMenu .contextMenuContents .contextMenuItem { border-radius: 0 !important; padding: 9px 18px !important; background: transparent !important; color: #fff !important; font-size: 14px !important; text-transform: lowercase !important; letter-spacing: 0 !important; }
+html .contextMenu .contextMenuContents .contextMenuItem:not(.disabled):is(:hover,:focus,.active) { background: var(--mt-accent) !important; }
+html .contextMenu .contextMenuContents .contextMenuItem.disabled { opacity: .35; }
+html .contextMenu .contextMenuContents hr.Separator, html .contextMenu hr { border: none !important; height: 1px !important; margin: 4px 0 !important; background: #3A4148 !important; }
+html .contextMenu .contextMenuContents .contextMenuItem.ContextMenuAction:is(.Play,.Launch) { background: var(--mt-accent) !important; font-weight: 600 !important; }
+html .contextMenu .contextMenuContents .contextMenuItem.ContextMenuAction svg :is(path,polygon,rect,circle) { fill: currentColor !important; }

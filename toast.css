@@ -1,0 +1,14 @@
+/* Metro — desktop notifications. */
+@import url("./core/alias.css");
+@import url("./core/tokens.css");
+@import url("./core/base.css");
+html:has(> body.DesktopToastContainer),
+html body.DesktopToastContainer { background: transparent !important; }
+html .DesktopToastContainer .DesktopToastBackground,
+html .DesktopToastContainer .DesktopToastTemplate { background: transparent !important; }
+/* METRO notifications: a flat accent tile sliding in, large light text */
+html .DesktopToastContainer .DesktopToastPopup { border-radius: 0 !important; border: none !important; background: var(--mt-accent) !important; animation: mt-toast 340ms cubic-bezier(.1,.9,.2,1) backwards; }
+@keyframes mt-toast { from { transform: translateX(100%); } to { transform: none; } }
+html .DesktopToastContainer .DesktopToastTemplate :is(span, div) { color: #fff !important; }
+html .DesktopToastContainer .DesktopToastTemplate :is(.Header .Title,.GroupMessageUserName,.IngameTitle) { font-family: var(--mt-light) !important; font-weight: 300 !important; font-size: 19px !important; text-transform: lowercase; }
+html .DesktopToastContainer .DesktopToastTemplate :is(.AppLogo,.StandardLogoDimensions), html .DesktopToastContainer .DesktopToastTemplate .AppLogo :is(.Container,img) { border-radius: 0 !important; }

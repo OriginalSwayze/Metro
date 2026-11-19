@@ -1,0 +1,6 @@
+/* METRO — the backdrop is a single flat graphite plane, with one thin accent line running across the header. */
+html { background: var(--mt-bg) !important; }
+body { background: transparent !important; }
+html::after { content: ""; position: fixed; left: 0; top: 0; width: 220px; height: 2px; z-index: 60; pointer-events: none;
+    background: linear-gradient(90deg, transparent, var(--mt-accent), transparent); animation: mt-run 7s cubic-bezier(.6,0,.4,1) infinite; animation-play-state: var(--mr-ambient); opacity: var(--mt-runner, 1); }
+.Wrapper.ForceOpaqueBackground, .FocusNavigationRoot, .Root, .OuterFrame, .ContentFrame { background: transparent !important; }

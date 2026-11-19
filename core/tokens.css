@@ -1,0 +1,34 @@
+/* METRO — tokens. Flat graphite and gunmetal; one burnt accent; light, large type. */
+:root {
+    --mt-bg: var(--mt-p-bg, #16191D);
+    --mt-surface: var(--mt-p-surface, #1F2328);
+    --mt-tile: var(--mt-p-tile, #2A3036);
+    --mt-accent: var(--mt-p-accent, #E8742A);
+    --mt-accent-dim: color-mix(in srgb, var(--mt-accent) 18%, transparent);
+    --mt-light: "Segoe UI Light", "Segoe UI", sans-serif;
+    --mt-text: "Segoe UI", sans-serif;
+    --mt-semi: "Segoe UI Semibold", "Segoe UI", sans-serif;
+    --t-accent: var(--mt-accent);
+    --t-accent-2: #FFFFFF;
+    --t-alert: #E5484D;
+    --t-bg: var(--mt-bg);
+    --t-panel: var(--mt-surface);
+    --t-ink: #FFFFFF;
+    --t-fg: #FFFFFF;
+    --t-fg-2: #C2C7CD;
+    --t-fg-3: #858C94;
+    --t-fg-4: #575E66;
+    --t-line: rgba(255,255,255,.07);
+    --mr-r: 0px; --mr-r-lg: 0px; --mr-r-md: 0px; --mr-r-sm: 0px; --mr-r-pill: 0px;
+    --mr-glass: var(--mt-surface); --mr-glass-strong: var(--mt-surface); --mr-glass-solid: var(--mt-surface);
+    --mr-glass-filter: none; --mr-glass-edge: none;
+    --mr-shadow-1: none; --mr-shadow-2: none; --mr-shadow-3: 0 10px 30px rgba(0,0,0,.5);
+    --mr-font: var(--mt-text); --mr-font-display: var(--mt-light); --mr-font-mono: Consolas, monospace;
+    --mr-grad: linear-gradient(var(--mt-accent), var(--mt-accent));
+    --mr-grad-soft: linear-gradient(var(--mt-accent), var(--mt-accent));
+    --mr-on-accent: #FFFFFF;
+    --mr-hover: rgba(255,255,255,.06);
+    --mr-ease: cubic-bezier(0.1, 0.9, 0.2, 1);
+    --mr-t-2: 180ms; --mr-t-3: 340ms; --mr-t-4: 520ms;
+    --mr-spot: none;
+}

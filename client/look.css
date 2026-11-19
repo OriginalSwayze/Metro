@@ -1,0 +1,97 @@
+/* METRO — the look: flat squares, no gradients or glow, large light type, solid accent selection. */
+html :is(.UpdatesContainer .Name, .ShowcaseHeader .Focusable, .ShowcaseHeader .DialogDropDown_CurrentDisplay) {
+    font-family: var(--mt-light) !important; font-weight: 300 !important; font-size: 30px !important; letter-spacing: -.01em !important; text-transform: lowercase !important; color: #fff !important;
+}
+html :is(.AppDetailsSection .SectionHeader, h2.SectionHeader) {
+    position: relative; font-family: var(--mt-light) !important; font-weight: 300 !important; font-size: 24px !important; letter-spacing: 0 !important; text-transform: lowercase !important; color: #fff !important; background: transparent !important;
+}
+html .AppDetailsSection .SectionHeader::before {
+    content: "" !important; position: absolute; left: 0; bottom: -2px; width: 46px !important; height: 3px !important; border-radius: 0 !important;
+    background: var(--mt-accent) !important; box-shadow: none !important; transform-origin: left; animation: mt-line 600ms var(--mr-ease) 200ms backwards;
+}
+html :is(.PlayBar .PlayBarLabel, .UpdatesContainer .EventTime, .LeftListSizableContainer .SearchBar .MenuHeader .ViewName) {
+    font-family: var(--mt-semi) !important; font-size: 11px !important; font-weight: 600 !important; letter-spacing: .06em !important; text-transform: uppercase !important; color: var(--t-fg-3) !important;
+}
+html .PlayBar :is(.LastPlayedInfo, .PlayBarDetailLabel) { font-family: var(--mt-light) !important; font-size: 20px !important; font-weight: 300 !important; color: #fff !important; }
+
+/* Wordmark: a flat accent square and the name in light lowercase */
+html .RootMenuBar .RootMenuButton .SteamButton::before { width: 14px; height: 14px; border-radius: 0; background: var(--mt-accent); box-shadow: none; animation: none; }
+html .RootMenuBar .RootMenuButton .SteamButton::after { content: "metro"; font-family: var(--mt-light); font-weight: 300; font-size: 18px; letter-spacing: 0; color: #fff; }
+html .RootMenuBar .RootMenuButton { font-family: var(--mt-text) !important; font-size: 12px !important; text-transform: lowercase !important; color: var(--t-fg-3) !important; border-radius: 0 !important; }
+html .RootMenuBar .RootMenuButton:hover { background: var(--mr-hover) !important; color: #fff !important; }
+
+/* Lock-screen clock */
+html .od-hud { position: fixed !important; top: 46px; right: 200px; margin: 0 !important; display: flex; flex-direction: column; align-items: flex-end; pointer-events: none; z-index: 30; }
+html .od-hud .tm { font: 300 44px/1 var(--mt-light); color: #fff; letter-spacing: -.02em; }
+html .od-hud .dt { font: 11px var(--mt-semi); letter-spacing: .08em; text-transform: uppercase; color: var(--t-fg-3); margin-top: 4px; }
+@media (max-width: 1250px) { html .od-hud { display: none; } }
+
+/* Flat buttons top-right */
+html .TitleBarControls .Button, html .TitleBarControls .AccountMenu { border-radius: 0 !important; background: transparent !important; box-shadow: none !important; -webkit-backdrop-filter: none !important; backdrop-filter: none !important; }
+html .TitleBarControls .Button:hover, html .TitleBarControls .AccountMenu:hover { background: var(--mr-hover) !important; transform: none !important; }
+html .TitleBarControls .AccountMenu .avatarHolder, html .TitleBarControls .AccountMenu img.avatar { border-radius: 0 !important; box-shadow: none !important; }
+html .TitleBarControls .AccountMenu .WalletBalance { background: transparent !important; color: var(--t-fg-2) !important; }
+html .TitleBar .title-bar-actions .title-area-icon { border-radius: 0 !important; }
+html .TitleBar .title-bar-actions .title-area-icon:hover { transform: none !important; }
+html .TitleBar .title-bar-actions .title-area-icon.closeButton:hover { background: #E5484D !important; }
+
+/* Panels: flat planes, no edges */
+html .Library > .Container > div:not(.MainPanel):first-child, html .MainPanel {
+    border-radius: 0 !important; background: var(--mt-surface) !important; box-shadow: none !important; -webkit-backdrop-filter: none !important; backdrop-filter: none !important; clip-path: none !important;
+}
+html .Library > .Container > div:not(.MainPanel):first-child { background: transparent !important; }
+
+/* Game list: generous rows, solid accent selection */
+html .HomeBox .Bar .Label { font-family: var(--mt-light) !important; font-size: 20px !important; font-weight: 300 !important; text-transform: lowercase !important; letter-spacing: 0 !important; }
+html .HomeBox .Bar.Selected { background: transparent !important; box-shadow: none !important; }
+html .HomeBox .Bar.Selected .Label { color: var(--mt-accent) !important; }
+html .SearchInput input.DialogInput, html .SearchInput input.DialogTextInputBase { border-radius: 0 !important; background-color: #fff !important; color: #111 !important; border: none !important; height: 34px !important; }
+html .SearchInput input::placeholder { color: #666 !important; }
+html .SearchInput input.DialogInput:focus { box-shadow: inset 0 0 0 2px var(--mt-accent) !important; }
+html .ReactVirtualized__List .SectionName { font-family: var(--mt-semi) !important; font-size: 11px !important; letter-spacing: .06em !important; text-transform: uppercase !important; color: var(--mt-accent) !important; }
+html .ReactVirtualized__List .SectionRule { display: none; }
+html .ReactVirtualized__List .Container:has(> .GameListEntryContainer) { border-radius: 0 !important; transition: background-color 120ms !important; }
+html .ReactVirtualized__List .GameListEntryContainer > span { font-size: 14px !important; }
+html .ReactVirtualized__List .GameListEntryContainer .GameIcon, html .ReactVirtualized__List .GameListEntryContainer .GameIcon img { border-radius: 0 !important; }
+html .ReactVirtualized__List .Container:has(> .GameListEntryContainer):hover { background: var(--mr-hover) !important; }
+html .ReactVirtualized__List .Container:has(> .GameListEntryContainer):hover .GameListEntryContainer { transform: none !important; }
+html body .ReactVirtualized__List .Container.Selected.Selected:has(> .GameListEntryContainer) { background: var(--mt-accent) !important; box-shadow: none !important; }
+html body .ReactVirtualized__List .Container.Selected.Selected:has(> .GameListEntryContainer) .GameListEntryContainer > span { color: #fff !important; }
+html .ReactVirtualized__List .Container.Selected:has(> .GameListEntryContainer)::before { display: none !important; }
+
+/* Tiles: flat squares that press in like a tile does */
+html .UpdatesContainer { background: transparent !important; }
+html .UpdatesContainer .HoversEnabled, html .LibraryItemBox, html .LibraryItemBox > * { border-radius: 0 !important; }
+html .LibraryItemBox { box-shadow: none !important; transition: transform 160ms var(--mr-ease) !important; }
+html .LibraryItemBox:hover { box-shadow: inset 0 0 0 2px var(--mt-accent), 0 0 0 2px var(--mt-accent) !important; }
+html .LibraryItemBox:active { transform: perspective(700px) rotateX(calc(var(--mr-rx, 0) * 1deg)) rotateY(calc(var(--mr-ry, 0) * 1deg)) scale(.97) !important; }
+html .LibraryItemBox::after, html .LibraryItemBoxShine { display: none !important; }
+html .PageLeft, html .PageRight { border-radius: 50% !important; background: transparent !important; box-shadow: inset 0 0 0 2px #fff !important; }
+html :is(.PageLeft, .PageRight):not(.Disabled):hover { background: #fff !important; transform: none !important; }
+html :is(.PageLeft, .PageRight):not(.Disabled):hover svg * { stroke: #111 !important; }
+html .ShowcaseHeader .Rule, html .AddShowcaseRow .Rule { height: 1px !important; background: var(--t-line) !important; }
+
+/* Game page */
+html .AppDetailsMain .TopCapsule { border-radius: 0 !important; }
+html .AppDetailsMain .PlayBar > .InnerContainer { border-radius: 0 !important; background: var(--mt-surface) !important; box-shadow: none !important; -webkit-backdrop-filter: none !important; backdrop-filter: none !important; }
+html .PlayButton.ButtonChild { border-radius: 0 !important; background: var(--mt-accent) !important; box-shadow: none !important; animation: none !important; min-width: 190px; }
+html .PlayButton.ButtonChild .ButtonText { font-family: var(--mt-light) !important; font-weight: 300 !important; font-size: 26px !important; letter-spacing: 0 !important; text-transform: lowercase !important; color: #fff !important; }
+html .PlayButton.ButtonChild::after { display: none !important; }
+html .PlayButton.ButtonChild:hover { background: color-mix(in srgb, var(--mt-accent) 85%, white) !important; transform: none !important; }
+html .PlayButton.ButtonChild:active { transform: scale(.97) !important; }
+html .PlayBar .RightControls .MenuButton { border-radius: 50% !important; background: transparent !important; box-shadow: inset 0 0 0 2px var(--t-fg-3) !important; }
+html .PlayBar .RightControls .MenuButton:hover { box-shadow: inset 0 0 0 2px #fff !important; transform: none !important; }
+html .LinksSection .LinkInner { border-radius: 0 !important; background: transparent !important; box-shadow: none !important; color: var(--t-fg-2) !important; font-family: var(--mt-light) !important; font-size: 17px !important; font-weight: 300 !important; text-transform: lowercase !important; letter-spacing: 0 !important; padding: 4px 10px !important; }
+html .LinksSection .LinkInner:hover { color: var(--mt-accent) !important; background: transparent !important; transform: none !important; }
+html .AppDetailsSection:not(.LinksSection) > .Panel, html .PartnerEvent.Event { border-radius: 0 !important; background: var(--mt-tile) !important; box-shadow: none !important; }
+html .PartnerEventFeaturedHeader { background: var(--mt-accent) !important; color: #fff !important; text-transform: lowercase; }
+html .ProgressBar .Unlocked, html .ProgressBar [class*="Unlocked"], html .PlayBar .DetailsProgressBar { border-radius: 0 !important; background: var(--mt-accent) !important; box-shadow: none !important; }
+html .ProgressBar, html .PlayBar .DetailsProgressContainer { border-radius: 0 !important; background: #3A4148 !important; }
+
+/* Startup */
+html .od-boot.mt-start { position: fixed; inset: 0; z-index: 10000; pointer-events: none; background: var(--mt-accent);
+    display: flex; flex-direction: column; justify-content: center; padding-left: 12vw; gap: 18px; animation: mt-out 420ms var(--mr-ease) 2300ms forwards; }
+html .od-boot.mt-start .h { font: 300 96px var(--mt-light); color: #fff; letter-spacing: -.03em; animation: mr-fade-up 700ms var(--mr-ease) backwards; }
+html .od-boot.mt-start .s { font: 300 22px var(--mt-light); color: rgba(255,255,255,.85); animation: mr-fade-up 700ms var(--mr-ease) 120ms backwards; }
+html .od-boot.mt-start .b { width: 260px; height: 3px; background: rgba(255,255,255,.3); position: relative; overflow: hidden; }
+html .od-boot.mt-start .b::after { content: ""; position: absolute; left: 0; top: 0; bottom: 0; background: #fff; animation: mt-fill 1.8s var(--mr-ease) 300ms backwards; width: 100%; }
