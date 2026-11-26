@@ -1,6 +1,6 @@
 # Metro
 
-**Modern industrial minimalism.** From the concept pack's METRO direction. A [Millennium](https://steambrew.app) theme for the Steam client.
+**Modern industrial minimalism.** From the concept pack's METRO direction. A Steam client theme for [Beyond Steam](https://github.com/OriginalSwayze/Beyond-Steam) and [Millennium](https://steambrew.app).
 
 ![Metro: library](media/library.gif)
 
@@ -15,13 +15,14 @@
 
 ## Install
 
-1. Install [Millennium](https://steambrew.app).
-2. Find **Metro** in the Millennium theme browser, or download this repository into `Steam/millennium/themes/Metro`.
-3. Open **Steam → Millennium → Themes** and pick **Metro**.
+- **With [Beyond Steam](https://github.com/OriginalSwayze/Beyond-Steam) (easiest):** in Steam press **Ctrl+Shift+B**, open
+  **Get more** and install **Metro**.
+- **By hand:** download **Metro.zip** from the [latest release](https://github.com/OriginalSwayze/Metro/releases/latest) and unzip
+  it into `%APPDATA%\Beyond Steam\themes\Metro` (Beyond Steam) or `Steam\millennium\themes\Metro` (Millennium).
 
 ## Options
 
-Open **Millennium → Themes → Metro** to change:
+In Beyond Steam's **Theme options** tab (or **Millennium → Themes → Metro**) you can change:
 
 Accent colour (Burnt orange, Amber, Cobalt, Lime, Magenta) · Accent line · Density · What's New · Readout · Startup screen · Motion · Cover hover · Privacy · Contrast · Focus rings · Text size
 
